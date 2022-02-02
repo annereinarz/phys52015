@@ -45,7 +45,7 @@ documentation](https://www.dur.ac.uk/arc/hamilton/).
 You access Hamilton via ssh with
 
 ```sh
-$ ssh USERNAME@hamilton.dur.ac.uk
+$ ssh USERNAME@hamilton8.dur.ac.uk
 ```
 
 {{% hint info %}}
@@ -83,26 +83,18 @@ modules](https://modules.readthedocs.io/en/latest/) so that different
 Hamilton users can control which compilers and tools they get.
 
 Often in this course we'll use the Intel compiler for which we need to
-load two modules
+load the module
 
 ```sh
-$ module load intel/xe_2018.2
-$ module load gcc/9.3.0
+$ module load intel/2021.4
 ```
 
-This makes the Intel compiler tools available and loads a recent
-version of gcc. After executing these commands you can check the
-versions you have
+This makes the Intel compiler tools available. After executing this command
+you can check the version you have
 ```sh
 $ icc --version
-icc (ICC) 18.0.2 20180210
-Copyright (C) 1985-2018 Intel Corporation.  All rights reserved.
-
-$ gcc --version
-gcc (GCC) 9.3.0
-Copyright (C) 2019 Free Software Foundation, Inc.
-This is free software; see the source for copying conditions.  There is NO
-warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+icc (ICC) 2021.4.0 20210910
+Copyright (C) 1985-2021 Intel Corporation.  All rights reserved.
 ```
 
 The exercises will typically enumerate the modules you need.
@@ -148,8 +140,7 @@ Here is a simple example for a serial job.
 
 source /etc/profile.d/modules.sh
 
-module load intel/xe_2018.2
-module load gcc/9.3.0
+module load intel
 
 ./myexecutable
 ```
